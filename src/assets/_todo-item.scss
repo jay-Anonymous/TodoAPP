@@ -1,0 +1,108 @@
+.todo-item{
+    height: 1.2rem;
+    font-size: .8rem;
+    padding: 1rem 1.2rem;
+    list-style: none;
+    border-bottom: 1px solid $light-grayish-2;
+    background-color:  #fff;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    
+    &:first-of-type{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .check{
+        position: relative;
+        
+        #toggle-complete{
+            opacity: 0;
+            width: 20px;
+            margin-right: .6rem;
+            position: relative;
+        }
+
+        .checkmark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:18px;
+            height:18px;
+            border-radius: 50%;
+            translate: 0 -1px;
+            cursor: pointer;
+            
+            background:linear-gradient(#fff, #fff) padding-box,
+                       $light-grayish-3 border-box;
+            border: 1px solid transparent;
+
+            svg{
+                position: absolute;
+                top:25%;
+                left:25%;
+                display: none;
+            }
+
+            @media only screen and (max-width: $phone), 
+            only screen and (hover){
+                &:hover{
+                    background:linear-gradient(#fff, #fff) padding-box,
+                    $color-check border-box;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+
+    .title{
+        flex: 1;
+        line-height: 1.5;
+        translate: 0 2px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+    #urgent{
+        display: none;
+    }
+    
+    .urgent-label{
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        color: $light-grayish-3;
+        
+        svg{
+           translate: 2px 2px;
+        }
+        
+        @media only screen and (min-width: $phone), 
+        only screen and (hover){
+            &:hover{
+                color: $light-grayish-2;
+            }
+        }
+    }
+
+    button{   
+        transform: translateY(2px);
+        background-color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-left: 15px;
+
+        @media only screen and (min-width: $phone), 
+        only screen and (hover){
+            &:hover{
+                color: $light-grayish-3;
+            }
+        }
+    }
+} 

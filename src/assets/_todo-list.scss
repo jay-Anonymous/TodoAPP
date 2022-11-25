@@ -1,0 +1,64 @@
+ul{
+    margin-top: 1.2rem;
+    border-radius:  10px 10px 0 0;
+    overflow: auto;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.sort-todo{
+    flex:1;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+    padding: 0 ;
+
+    input{
+        display: none;
+    }
+
+    label {
+        font-size: .8rem;
+        font-weight: 700;
+        color: $light-grayish-3;
+        margin-left:1.5rem ;
+        cursor: pointer;
+
+        @media(max-width: $phone){
+            &:first-of-type{
+                margin-left: 0rem;
+            }
+        }
+
+        &:hover{
+            color: $light-grayish-4;
+        }
+    }
+
+    @media(max-width: $phone){
+        display: none;
+        flex:0;
+    }
+    
+}
+
+.mobile{
+    display: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px -5px $light-grayish-1,
+                -5px 5px 15px -5px $light-grayish-1;
+
+    button:active,
+    button:focus{
+        color: $color-bright-blue;
+    }  
+
+    @media(max-width: $phone){
+        display: block;
+    }
+}

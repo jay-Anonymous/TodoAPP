@@ -1,0 +1,165 @@
+.darkmode {
+    background-color: $dark-blue-1;
+
+    #container main{
+        form{
+            input{
+                color: $dark-grayish-blue-1;
+                background-color: $dark-blue-2;
+                
+                &::placeholder{
+                    color: $dark-grayish-blue-2;
+                }
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 1000px $dark-blue-2 inset !important;
+                    -webkit-text-fill-color: $dark-grayish-blue-1 !important;
+                }
+            }
+            
+            button{
+                color: $dark-grayish-blue-2;
+                background-color: $dark-blue-2;
+
+                @media only screen and (min-width: $phone), 
+                only screen and (hover){
+                    &:hover{
+                        color: $dark-grayish-blue-hover;
+                    }
+                }
+            }
+        }
+
+        ul{
+            li{
+                color: $dark-grayish-blue-1;
+                background-color: $dark-blue-2;
+                border-bottom: 1px solid $dark-grayish-blue-3;
+            }
+
+            .check {
+                #toggle-complete{
+                    &:checked + .checkmark{
+                        background:$color-check padding-box,
+                        $color-check border-box;
+                        svg{
+                            display: block;
+                        }
+                    }
+                }
+
+                .checkmark{
+                    background:linear-gradient($dark-blue-2,$dark-blue-2) padding-box,
+                    $dark-grayish-blue-3 border-box;
+
+                    @media only screen and (min-width: $phone), 
+                    only screen and (hover){
+                        &:hover{
+                            background:linear-gradient($dark-blue-2,$dark-blue-2) padding-box,
+                            $color-check border-box;
+                            svg{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .urgent-label{
+                color: $dark-grayish-blue-2;
+                @media only screen and (min-width: $phone), 
+                only screen and (hover){
+                    &:hover {
+                        color: $dark-grayish-blue-hover;
+                    }
+                }
+            }
+
+            button{
+                background-color: $dark-blue-2;
+
+                &:hover,
+                &:hover svg{
+                    color: $dark-grayish-blue-hover; 
+                }
+
+                svg{
+                    color: $dark-grayish-blue-2;
+                }
+            }
+        }
+
+        nav{
+           background-color: $dark-blue-2;
+           
+            button{
+                background-color: $dark-blue-2;
+            }
+
+            button:hover{
+                color: $dark-grayish-blue-hover;
+            }
+            
+        }
+    }
+
+    .sort-todo{
+        background-color: $dark-blue-2;
+
+        label{
+            background-color: $dark-blue-2;
+
+            &:hover{
+                color: $dark-grayish-blue-hover;
+            }
+
+            &:active,
+            &:focus{
+            color: $color-bright-blue;
+        }
+        }
+    }
+
+    .shadow-layout,
+    .mobile{
+        box-shadow: none;
+        background-color: $dark-blue-2;
+    }
+
+    .attribution{
+        color: $dark-grayish-blue-3;
+
+        a{
+            color: $dark-grayish-blue-2;
+        }
+    }
+
+    .completed{
+        text-decoration: line-through;
+        color: $dark-grayish-blue-3
+    }
+
+    .invalid-alert{
+        background-color: $dark-blue-1;
+        color: $dark-grayish-blue-1;
+
+        header {
+            background-color:hsl(280, 79%, 24%);
+            width: 100%;
+            padding: 1rem;
+        }
+
+        button{
+            background-color: $dark-blue-1;
+            color: $dark-grayish-blue-2;
+            
+            &:active{
+                background-color: $dark-grayish-blue-4;
+                color: $dark-grayish-blue-hover;
+            }
+        }
+    }
+}

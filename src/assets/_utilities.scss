@@ -1,0 +1,24 @@
+.hidden{
+    display: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: $light-grayish-3;
+}
+
+.completed-label{
+    background:$color-check padding-box,
+    $color-check border-box !important;
+    svg{
+        display: block !important;
+    }
+}
+
+.is-urgent{
+    color: red !important;
+}
+
+.active{
+    color: $color-bright-blue !important;
+}
